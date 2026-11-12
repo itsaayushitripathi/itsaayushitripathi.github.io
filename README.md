@@ -1,25 +1,27 @@
 # Aayushi Tripathi — Portfolio
 
-**Live portfolio:** https://itsaayushitripathi.github.io  
-**Interactive startup launch tracker:** https://itsaayushitripathi.github.io/launch-tracker/
+**Portfolio site:** https://itsaayushitripathi.github.io  
+**Complete work library:** https://itsaayushitripathi.github.io/work.html  
+**Interactive Startup Launch Tracker:** https://itsaayushitripathi.github.io/launch-tracker/  
+**Drive Before You Buy case study:** https://itsaayushitripathi.github.io/portfolio/drive-before-buy/  
+**Dashboard systems gallery:** https://itsaayushitripathi.github.io/portfolio/dashboards/  
+**Strategy, content & operations systems:** https://itsaayushitripathi.github.io/portfolio/systems/
 
-This repository hosts a portfolio of cross-functional D2C business building work, launch planning systems, analytics, strategy frameworks, and AI-assisted operating tools.
+## Portfolio scope
+This portfolio captures cross-functional D2C launch work spanning brand and business strategy, product foundations, launch management, e-commerce, marketing analytics, financial modelling, SEO/AEO/GEO, conversion copy, creative production, waitlist/lifecycle, fulfilment and AI-assisted operations.
 
-## Featured work
-- **Startup Launch Tracker:** a reusable, interactive startup launch dashboard organized by department and the Build / Sell / Deliver / Control operating buckets. Includes search, filters, task status editing, task creation, department pulse, local browser saving, and CSV export.
-- **Nodd Men launch systems case study:** the source work inventory covers brand strategy architecture, launch planning, marketing and e-commerce dashboards, D2C P&L modelling, SEO/content systems, waitlist program, website copy frameworks, launch scripts, and operations SOPs.
-- **Cross-functional portfolio library:** project summaries cover strategy, product, growth, creative, commerce, analytics, finance, supply chain, customer experience, and operations.
+### Interactive / project showcases
+- **Startup Launch Tracker:** generic startup launch dashboard, departments and Build / Sell / Deliver / Control buckets, task filters/editing, browser-local save and CSV export.
+- **Drive Before You Buy:** interactive portfolio concept preview and detailed case study of a gamified Shopify password-page waitlist. Documentation covers original Liquid/JavaScript build, 3D models, vehicle video/audio throttle, native signup capture and mobile optimization.
+- **Dashboard Systems Gallery:** architecture walkthrough for marketing funnel, store health, D2C P&L, waitlist, keyword intelligence and launch management dashboards.
+- **Work Library:** categorized catalog of the sanitized work inventory across interactive builds, dashboards, strategy, creative and operations.
+- **Strategy & Operating Systems:** deeper summaries of brand bible, design system, audience/market research, launch plans, copy architecture, scripts, fulfilment and AI workflow systems.
 
-## Privacy and data boundaries
-Public examples are sanitized or generalized. Confidential internal names, partners, formulation and supplier details, contractual materials, consumer research data, credentials, internal targets, and budgets are excluded. Financial-model inputs are illustrative where noted. Please read [portfolio/sanitization.md](portfolio/sanitization.md).
+## Privacy boundaries
+Portfolio examples are sanitized, generalized or use explicitly illustrative data. Confidential internal targets/budgets, cost data, formulation and supplier details, contracts, participant records, credentials, biometric face-scan prototype and pre-decision naming/logo IP are excluded. Please see [portfolio/sanitization.md](portfolio/sanitization.md).
 
-## Use the dashboard
-The launch tracker is a generic planning aid, not a mandated checklist. Tasks should be tailored to business model, industry, geography, launch scope, and regulatory context. Browser edits stay in that browser's local storage; export CSV for a backup or spreadsheet workflow. It does not have server-side team sync.
-
-## Repository
-- [Live portfolio site](https://itsaayushitripathi.github.io)
-- [Startup Launch Tracker guide](launch-tracker/README.md)
-- [Work inventory](portfolio/work-inventory.md)
-- [Sanitization notes](portfolio/sanitization.md)
-
-Portfolio by Aayushi Tripathi.
+## Notes
+- Dashboard gallery is an architecture showcase, not a live connection to company data. KPI values are intentionally blank; visual bars are illustrative.
+- Some source dashboards and spreadsheets are documented in the portfolio but are not yet published as original downloadable files. Project pages accurately identify the type of work and source inventory status.
+- Launch tracker sample tasks are general examples. Customize by industry, geography, model and scope. Browser-local edits do not sync to a team database.
+- Work inventory: [portfolio/work-inventory.md](portfolio/work-inventory.md)
