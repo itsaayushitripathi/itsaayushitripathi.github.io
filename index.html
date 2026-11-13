@@ -15,6 +15,40 @@ header{border-bottom:1px solid var(--line)}.nav{min-height:68px;display:flex;ali
 footer{padding:18px 0 26px;display:flex;justify-content:space-between;color:var(--muted);font-size:10px}
 @media(max-width:800px){.hero{grid-template-columns:1fr;gap:22px;padding-top:42px}.profile{max-width:none}.flagships{grid-template-columns:1fr}.flag{min-height:auto}.library{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.approach{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}}
 @media(max-width:520px){.wrap{width:calc(100% - 30px)}.hero h1{font-size:42px}.nav{align-items:flex-start;padding:16px 0}.navlinks{flex-wrap:wrap;justify-content:flex-end}.contact{flex-direction:column;align-items:flex-start}.contact h2{font-size:25px}}
+/* Editorial portfolio redesign: dark forest canvas, clear hierarchy, bold navigation */
+:root{--bg:#102d29;--paper:#173a34;--ink:#f4f1e8;--muted:#c2c8bd;--line:#49615a;--sage:#c2cfaa;--dark:#0b211e}
+body{background:var(--bg);color:var(--ink)}
+a:hover{color:#dbe6c8}
+header,nav{border-color:var(--line)!important}
+.navlinks,.links{font-size:clamp(14px,1.35vw,17px)!important;font-weight:800!important;letter-spacing:.015em;color:var(--ink)!important;gap:clamp(18px,3vw,36px)!important}
+.nav,.wrap nav{min-height:82px}
+.mark{font-size:13px!important;color:var(--ink)}
+.hero{padding-top:clamp(54px,8vw,100px);padding-bottom:clamp(46px,7vw,80px)}
+.hero h1{font-size:clamp(48px,7.5vw,94px);line-height:.92;letter-spacing:-.055em}
+.intro,.hero p,.section-head p,.flag p,.flag li,.profile p,.profile ul,.card p,.card ul,.entry p,.approach p,.timeline p{color:var(--muted)!important}
+.role{background:rgba(255,255,255,.035);border-color:var(--line);color:var(--ink);font-size:12px;padding:9px 14px}
+.profile,.flag,.group,.card,.stat{background:transparent!important;border:0!important;border-radius:0!important}
+.profile{border-left:1px solid var(--line)!important;padding:24px 0 24px 28px!important}
+.section{border-color:var(--line)!important;padding:clamp(34px,5vw,58px) 0}
+.section-head{margin-bottom:clamp(22px,3vw,34px)}
+.section-head .section-number,.eyebrow.section-number{font-size:clamp(16px,1.8vw,21px)!important;letter-spacing:.16em!important;color:var(--sage)!important}
+.section-head h2{font-size:clamp(34px,5vw,58px)!important;line-height:.98!important;letter-spacing:-.045em!important}
+.flagships{gap:clamp(18px,3vw,34px)}
+.flag{border-top:1px solid var(--line)!important;padding:20px 0 18px!important;min-height:unset!important}
+.flag h3{font-size:clamp(26px,3vw,35px)!important;line-height:1.02!important}
+.flag .number{font-size:11px!important;color:var(--sage)!important}
+.flag .number span:last-child{border-color:var(--line)!important;color:var(--ink)!important}
+.flag .link,.entry a,.card .link{color:var(--sage)!important;font-size:12px!important}
+.group{border-top:1px solid var(--line)!important}
+.group-head{background:transparent!important;border-color:var(--line)!important;padding-left:0!important;padding-right:0!important}
+.entries{padding:4px 0!important}
+.entry{border-color:var(--line)!important}
+.contact{background:#e8e8d9!important;color:#142b25!important;border-radius:0!important}
+.contact p{color:#4e5a50!important}
+.contact a{border-color:#839080!important;color:#142b25!important}
+footer{color:var(--muted)!important;border-top:1px solid var(--line)}
+@media(max-width:800px){.navlinks{gap:14px!important}.navlinks a:nth-child(2){display:inline!important}.profile{border-left:0!important;border-top:1px solid var(--line)!important;padding:20px 0!important}}
+@media(max-width:520px){.nav{min-height:unset;padding:15px 0!important}.navlinks{font-size:13px!important}.hero h1{font-size:48px!important}}
 </style></head><body>
 <header><div class="wrap nav"><a class="mark" href="#">Aayushi Tripathi <span style="color:var(--sage)">/</span> Portfolio</a><nav class="navlinks"><a href="case-study.html">Case Studies</a><a href="about.html">About Me</a><a href="#contact">Contact</a></nav></div></header>
 <main>
