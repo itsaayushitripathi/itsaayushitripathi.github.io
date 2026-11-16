@@ -33,7 +33,7 @@ a.button-link:hover,a.button-link-primary:hover,a.link:hover,.work-card a.link:h
 }
 
 /* Portfolio-wide palette and spacing system: palette roles are intentionally restrained */
-:root{--bg:#F7F5EF;--paper:#fffdf9;--panel:#fffdf9;--surface:#fffdf9;--ink:#1c211f;--muted:#626966;--line:#dedbd2;--sage:#012622;--sage-light:#e8e6de;--dark:#012622;--choc:#012622;--cream:#F7F5EF;--gold:#E8AA14;--blue:#05204A;--amaranth:#7B0828;--serif:Georgia,'Times New Roman',serif}
+:root{--bg:#F7F5EF;--paper:#fffdf9;--panel:#fffdf9;--surface:#fffdf9;--ink:#1c211f;--muted:#626966;--line:#dedbd2;--sage:#012622;--sage-light:#e8e6de;--dark:#012622;--choc:#012622;--cream:#F7F5EF;--gold:#E8AA14;--blue:#05204A;--amaranth:#7B0828;--red:#7B0828;--serif:Georgia,'Times New Roman',serif}
 body{background:var(--bg)!important;color:var(--ink)!important;line-height:1.7!important}
 a{color:var(--sage)!important;text-underline-offset:3px}
 a:hover{color:var(--blue)!important}
