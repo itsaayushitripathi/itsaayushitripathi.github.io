@@ -31,3 +31,21 @@ a.button-link,a.button-link-primary,a.link,.work-card a.link,.entry a,.contact a
 a.button-link:hover,a.button-link-primary:hover,a.link:hover,.work-card a.link:hover,.entry a:hover,.contact a:hover,.profile a.link:hover,.btn:hover,.navlinks a:last-child:hover{
  background:#687660!important;color:#fffdf9!important;border-color:#687660!important;
 }
+
+/* Portfolio-wide palette and spacing system: palette roles are intentionally restrained */
+:root{--bg:#F7F5EF;--paper:#fffdf9;--panel:#fffdf9;--surface:#fffdf9;--ink:#1c211f;--muted:#626966;--line:#dedbd2;--sage:#012622;--sage-light:#e8e6de;--dark:#012622;--choc:#012622;--cream:#F7F5EF;--gold:#E8AA14;--blue:#05204A;--amaranth:#7B0828;--serif:Georgia,'Times New Roman',serif}
+body{background:var(--bg)!important;color:var(--ink)!important;line-height:1.7!important}
+a{color:var(--sage)!important;text-underline-offset:3px}
+a:hover{color:var(--blue)!important}
+h1,h2,h3,h4{line-height:1.13!important}
+p{margin-block:0 12px}
+section{scroll-margin-top:28px}
+.card,.work-card,.entry,.group,.stat,.profile{border-color:var(--line)!important;border-radius:16px!important}
+.button-link,a.link,.work-card a.link,.entry a,.contact a,.profile a.link,.btn,.actions button,.actions a,.tabs button,.controls button,.navlinks a:last-child{
+display:inline-flex!important;align-items:center;justify-content:center;gap:7px;max-width:100%;width:max-content;padding:10px 15px!important;border:1px solid #012622!important;border-radius:999px!important;background:#012622!important;color:#F7F5EF!important;font-size:11px!important;font-weight:800!important;line-height:1.4!important;text-decoration:none!important;white-space:normal!important;transition:background .16s,border-color .16s,transform .16s!important}
+.button-link:hover,a.link:hover,.work-card a.link:hover,.entry a:hover,.contact a:hover,.profile a.link:hover,.btn:hover,.actions button:hover,.actions a:hover,.tabs button:hover,.controls button:hover,.navlinks a:last-child:hover{
+background:#05204A!important;border-color:#05204A!important;color:#F7F5EF!important;transform:translateY(-1px)}
+/* Keep action rows from colliding or wrapping into adjacent controls */
+.actions,.buttons,.cta-row,.links,.navlinks{display:flex;flex-wrap:wrap;align-items:center;gap:10px!important}
+nav a{line-height:1.4}
+@media(max-width:700px){.wrap,.shell{width:min(100% - 30px,1120px)!important}.actions,.buttons,.cta-row{align-items:flex-start}}
