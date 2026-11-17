@@ -10,6 +10,13 @@ body{background:var(--bg)!important;color:var(--ink)!important;line-height:1.7!i
 .button,a.button,.cta a,.footer a,.nav a{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 15px;border:1px solid #012622;border-radius:999px;background:#012622;color:#F7F5EF!important;font-size:11px;font-weight:800;line-height:1.4;text-decoration:none;transition:background .16s,border-color .16s,transform .16s}
 .button:hover,a.button:hover,.cta a:hover,.footer a:hover,.nav a:hover{background:#05204A!important;border-color:#05204A!important;color:#F7F5EF!important;transform:translateY(-1px)}
 .nav{gap:10px;flex-wrap:wrap}.cta{gap:18px;align-items:center;flex-wrap:wrap}
+
+/* Privacy pass: keep the visual language visible, soften proprietary text-heavy slides */
+.slide:nth-child(2) img,.slide:nth-child(3) img,.slide:nth-child(5) img{filter:blur(1.7px);transform:scale(.995)}
+.slide:nth-child(2),.slide:nth-child(3),.slide:nth-child(5){position:relative}
+.slide:nth-child(2)::after,.slide:nth-child(3)::after,.slide:nth-child(5)::after{content:"DETAILS MASKED";display:inline-block;margin-top:8px;padding:4px 8px;border-radius:3px;background:#7B0828;color:#fff;font-size:9px;letter-spacing:.14em;font-weight:800}
+.slide:nth-child(2) figcaption,.slide:nth-child(3) figcaption,.slide:nth-child(5) figcaption{color:#626966}
+.eyebrow{color:#7B0828!important}.nav a:hover{color:#7B0828!important}
 </style></head><body><main class="wrap">
 <nav class="nav"><a href="../">Brand Bible showcase ↗</a><span class="links"><a href="../../../case-study.html">Case study</a><a href="../../../">Portfolio</a></span></nav>
 <section class="hero"><div class="eyebrow">Original deck · Selected pages</div><h1>Real slides from the Brand Bible.</h1><p>These are original pages from the Nodd Men PowerPoint, selected to show its expression and visual systems without publishing sensitive strategy or commercial information.</p></section>
