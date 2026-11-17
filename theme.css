@@ -65,3 +65,8 @@ body{background:#F7F5EF!important;color:#1c211f!important}
 .section:nth-of-type(even)>.wrap,.section:nth-of-type(even){background:linear-gradient(90deg,#7B082806,transparent 72%)}
 ::selection{background:#7B0828;color:#fff}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Active dashboard tabs use amaranth so the palette is visible in interaction states */
+.tabs button.active,.tabs button[aria-selected="true"],.tab.active{background:#7B0828!important;border-color:#7B0828!important;color:#F7F5EF!important}
+.tabs button:not(.active){background:#fffdf9!important;color:#012622!important;border-color:#dedbd2!important}
+.note-label{display:block!important;padding-top:12px!important;color:#626966!important;font-size:10px!important;font-weight:600!important}
