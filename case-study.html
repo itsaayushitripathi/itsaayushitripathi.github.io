@@ -20,7 +20,7 @@
 @media(max-width:800px){.hero{grid-template-columns:1fr;gap:28px;padding:52px 0}.hero-aside{max-width:550px}.section-head{grid-template-columns:1fr;gap:18px}.workstreams{grid-template-columns:1fr}.stream,.stream:nth-child(odd),.stream:nth-child(even){padding:22px 0;border-left:0}.stream:nth-child(even){border-left:0}.stages{grid-template-columns:repeat(2,1fr);gap:18px}.stage,.stage+.stage{padding:12px 8px 0 0;border-right:0;border-top:1px solid #ffffff35}.deliverables{grid-template-columns:1fr}.closing{grid-template-columns:1fr}.closing-actions{flex-direction:row;flex-wrap:wrap}.approach{margin:0 calc((100% - 91vw)/ -2)}}
 @media(max-width:560px){.wrap{width:calc(100% - 32px)}.site-header{height:auto;padding:17px 0;align-items:flex-start}.brand{gap:10px;font-size:8px}.monogram{font-size:29px}.nav{gap:11px;justify-content:flex-end;flex-wrap:wrap;font-size:10px}.hero h1{font-size:clamp(48px,13vw,68px)}.hero-copy{font-size:14px}.intro-strip{grid-template-columns:1fr}.intro-cell,.intro-cell+.intro-cell{padding:13px 0;border-right:0;border-bottom:1px solid var(--line)}.intro-cell:last-child{border-bottom:0}.section{padding:46px 0}.stream h3{font-size:29px}.stages{grid-template-columns:1fr 1fr}.stage h3{font-size:20px}.annotation{margin:28px 4px 0;padding:18px}.footer{flex-direction:column}.closing-actions{flex-direction:column}.action{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
-</style>
+ .evidence-grid{grid-template-columns:1fr 1fr;gap:0 28px}.evidence-grid .stream{padding:24px 0;border-top:1px solid var(--line)}.evidence-grid .stream:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}.evidence-grid .stream p{max-width:520px}.artifact-links{display:grid;gap:8px;margin-top:18px}.artifact-links a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);background:#fffdf7b8;font-size:12px;font-weight:650;line-height:1.35;transition:background .2s,border .2s,transform .2s}.artifact-links a:hover{background:#fff;border-color:var(--amaranth);transform:translateX(3px)}.artifact-links b{color:var(--amaranth);font-size:16px;flex:none}@media(max-width:800px){.evidence-grid{grid-template-columns:1fr}.evidence-grid .stream:nth-child(even){padding-left:0;border-left:0}}\n</style>
 </head>
 <body>
 <header class="wrap site-header">
@@ -38,57 +38,15 @@
 </section>
 <section class="wrap section" id="workstreams">
 <div class="section-head"><div><div class="eyebrow">The work, connected</div><h2>Six disciplines.<br>One brand.</h2></div><p>The connected work behind the build.</p></div>
-<div class="workstreams">
-<article class="stream">
-<div class="stream-top"><span class="stream-no">01</span><span class="stream-tag">Discover · Define</span></div>
-<h3>Brand & market foundation</h3>
-<p>Positioning, audience and a clear brand foundation.</p>
-<ul><li>Market & audience research</li><li>Positioning and Brand Bible</li><li>Voice and visual direction</li></ul>
-<span class="stream-note">Start with the customer. Then make the choices.</span>
-
-</article>
-<article class="stream">
-<div class="stream-top"><span class="stream-no">02</span><span class="stream-tag">Define · Build</span></div>
-<h3>Product & customer experience</h3>
-<p>Turning the brand promise into products and digital experiences.</p>
-<ul><li>Product & SKU architecture</li><li>Shopify site and product journeys</li><li>AI Face Analysis & Style Drops</li></ul>
-<span class="stream-note">The experience is the product, too.</span>
-
-</article>
-<article class="stream">
-<div class="stream-top"><span class="stream-no">03</span><span class="stream-tag">Build · Grow</span></div>
-<h3>Growth, search & content</h3>
-<p>Turning search intent and customer insight into demand.</p>
-<ul><li>Keyword Intelligence & search demand</li><li>SEO, AEO and GEO</li><li>Content, scripts and creative direction</li></ul>
-<span class="stream-note">Find the signal. Turn it into a story.</span>
-
-</article>
-<article class="stream">
-<div class="stream-top"><span class="stream-no">04</span><span class="stream-tag">Build · Convert</span></div>
-<h3>Commerce & conversion</h3>
-<p>Making discovery, shopping and checkout work together.</p>
-<ul><li>Storefront and merchandising</li><li>PDPs, payments and checkout</li><li>Shipping partner evaluation</li></ul>
-<span class="stream-note">Make the next step feel obvious.</span>
-
-</article>
-<article class="stream">
-<div class="stream-top"><span class="stream-no">05</span><span class="stream-tag">Measure · Decide</span></div>
-<h3>Business intelligence & finance</h3>
-<p>Giving decisions a clear commercial and performance view.</p>
-<ul><li>Performance dashboards</li><li>D2C P&amp;L and unit economics</li><li>Channel and SKU analysis</li></ul>
-<span class="stream-note">A spreadsheet is useful when it changes a decision.</span>
-
-</article>
-<article class="stream">
-<div class="stream-top"><span class="stream-no">06</span><span class="stream-tag">Operate · Scale</span></div>
-<h3>Operating systems & execution</h3>
-<p>Turning plans into coordinated, repeatable execution.</p>
-<ul><li>Launch planning and tracking</li><li>Fulfilment and vendor workflows</li><li>SOPs and automation</li></ul>
-<span class="stream-note">Make the work repeatable, not dependent on memory.</span>
-
-</article>
+<div class="workstreams evidence-grid">
+<article class="stream"><div class="stream-top"><span class="stream-no">01</span><span class="stream-tag">Brand foundation</span></div><h3>Make the brand mean something.</h3><p>Customer insight, category context and a distinct point of view, brought together in a system the whole brand can use.</p><div class="artifact-links"><a href="portfolio/brand-bible/">Brand Bible · selected original slides <b>↗</b></a><a href="portfolio/icp/">ICP & audience architecture <b>↗</b></a></div></article>
+<article class="stream"><div class="stream-top"><span class="stream-no">02</span><span class="stream-tag">Product experience</span></div><h3>Turn the promise into an experience.</h3><p>From product architecture and the storefront to useful interactive experiences that give customers a reason to engage.</p><div class="artifact-links"><a href="https://unseen-men.vercel.app/" target="_blank" rel="noopener">AI Face Analysis & Style Drops · live experience <b>↗</b></a><a href="portfolio/systems/shopify-copy/">Shopify website & PDP copy architecture <b>↗</b></a></div></article>
+<article class="stream"><div class="stream-top"><span class="stream-no">03</span><span class="stream-tag">Growth & demand</span></div><h3>Find the demand before chasing attention.</h3><p>Search behaviour, content strategy and creative direction connected into a repeatable demand engine.</p><div class="artifact-links"><a href="portfolio/dashboards/studio/?view=keyword">Keyword Intelligence · interactive dashboard <b>↗</b></a><a href="portfolio/systems/launch-creative/">Launch narrative, scripts & shoot planning <b>↗</b></a></div></article>
+<article class="stream"><div class="stream-top"><span class="stream-no">04</span><span class="stream-tag">Commerce & conversion</span></div><h3>Make buying feel effortless.</h3><p>Storefront structure, product merchandising, payment choices and fulfilment decisions shaped around the customer journey.</p><div class="artifact-links"><a href="portfolio/dashboards/studio/?view=commerce">E-commerce performance dashboard <b>↗</b></a><a href="portfolio/dashboards/waitlist/">Waitlist programme & acquisition dashboard <b>↗</b></a></div></article>
+<article class="stream"><div class="stream-top"><span class="stream-no">05</span><span class="stream-tag">Business intelligence</span></div><h3>Make the numbers useful.</h3><p>Commercial visibility across marketing, e-commerce, unit economics and profitability, built to support better decisions.</p><div class="artifact-links"><a href="portfolio/dashboards/studio/?view=marketing">Marketing performance dashboard <b>↗</b></a><a href="portfolio/dashboards/studio/?view=pnl">D2C P&amp;L & unit economics model <b>↗</b></a><a href="portfolio/dashboards/">Dashboard systems overview <b>↗</b></a></div></article>
+<article class="stream"><div class="stream-top"><span class="stream-no">06</span><span class="stream-tag">Operating systems</span></div><h3>Build a business that can keep moving.</h3><p>Launch planning, workflows, documentation and operating tools that turn scattered tasks into coordinated execution.</p><div class="artifact-links"><a href="launch-tracker/">Launch OS · interactive task manager <b>↗</b></a><a href="portfolio/systems/">Operating systems & playbooks <b>↗</b></a></div></article>
 </div>
-<div class="annotation"><small>FIELD NOTE / THE THROUGH-LINE</small><p>Strategy gives it direction. Execution gives it momentum.</p></div>
+<div class="annotation"><small>FIELD NOTE / THE THROUGH-LINE</small><p>Not a collection of deliverables. A connected business system, from first insight to daily execution.</p></div>
 </section>
 
 
