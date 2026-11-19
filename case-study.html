@@ -49,50 +49,74 @@ body.review-picking,body.review-picking *{cursor:crosshair!important}
 .review-note:before{content:"YOUR REVIEW NOTE";display:block;margin-bottom:5px;color:var(--amaranth);font:9px var(--mono);letter-spacing:.12em}
 .review-note button{float:right;border:0;background:transparent;color:var(--amaranth);cursor:pointer;font:12px var(--mono)}
 @media(max-width:560px){.review-dock{right:8px;bottom:8px;left:8px;justify-content:center}.review-hint{width:calc(100% - 24px);text-align:center;bottom:64px}}
+
+.case-number{font:clamp(50px,7vw,88px)/.95 var(--serif);letter-spacing:-.06em;margin:0 0 18px;color:var(--amaranth)}
+.case-subtitle{font:clamp(30px,4vw,48px)/1.04 var(--serif);font-weight:500;letter-spacing:-.045em;margin:0 0 12px}
+.case-subtitle em{color:var(--amaranth);font-weight:500}
+.case-context{margin-top:8px;color:var(--muted)}
+.section-head{align-items:start!important}
+.section-head h2{font-size:clamp(42px,5.2vw,68px)!important;line-height:.98!important;margin:0!important}
+.section-head p{font:15px/1.55 var(--sans)!important;padding-top:10px}
+.approach-table{border-top:1px solid var(--line)}
+.approach-row{display:grid;grid-template-columns:55px .8fr 1.4fr auto;gap:18px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.approach-row span,.work-row span{font:10px var(--mono);letter-spacing:.12em;color:var(--amaranth)}
+.approach-row strong{font:24px var(--serif);font-weight:500}
+.approach-row p{margin:0;font-size:13px;color:var(--muted)}
+.approach-row i{justify-self:end;background:#fff0c9;border:1px solid #e8d69e;padding:7px 11px;font:italic 13px var(--serif);color:var(--amaranth);transform:rotate(-1deg)}
+.work-table{border-top:1px solid var(--line)}
+.work-row{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
+.work-row h3{font:24px/1.1 var(--serif);margin:6px 0}
+.work-row p{font-size:12px;color:var(--muted);margin:0}
+.work-row a{display:inline-block;max-width:260px;padding:9px 13px;background:#fff0c9;border:1px solid #e8d69e;box-shadow:2px 3px 0 #05204a10;font:italic 14px var(--serif);color:var(--amaranth);transform:rotate(-1deg);transition:transform .2s,background .2s}
+.work-row:nth-child(3n) a{background:#e9edf5;border-color:#c5cede;color:var(--blue);transform:rotate(1deg)}
+.work-row:nth-child(3n+2) a{background:#e4eee8;border-color:#c1d3c6;color:var(--evergreen)}
+.work-row a:hover{transform:translateY(-3px) rotate(0);background:#fff7df}
+@media(max-width:760px){.approach-row{grid-template-columns:35px 1fr;gap:8px 12px}.approach-row p{grid-column:2}.approach-row i{grid-column:2;justify-self:start}.work-row{grid-template-columns:1fr;gap:10px}.work-row a{justify-self:start}.section-head{grid-template-columns:1fr!important;gap:10px!important}}
 </style>
 </head>
 <body>
 <header class="wrap site-header">
 <a class="brand" href="./"><span class="monogram">AT<span>.</span></span><span class="brand-rule"></span><span>Aayushi Tripathi<br>Portfolio</span></a>
-<nav class="nav" aria-label="Main navigation"><a href="./#work">Work</a><a href="./#work">Case Study</a><a href="about.html">About</a><a href="./#contact">Contact</a></nav>
+<nav class="nav" aria-label="Main navigation"><a href="./#work">Work</a><a href="about.html">About</a><a href="./#contact">Contact</a></nav>
 </header>
 <main>
 <section class="wrap hero">
 <div>
-<div class="eyebrow"><span class="section-index">01 / Case study</span> · Building D2C Skincare Brand at Nodd Men</div>
-<h1>Building a brand.<br><em>Across the whole business.</em></h1>
+<h1 class="case-number">01 / Case Study</h1>
+<h2 class="case-subtitle">Building a brand. <em>Across the whole business.</em></h2>
+<div class="eyebrow case-context">Building D2C Skincare Brand at Nodd Men</div>
 <p class="hero-copy">Building Nodd Men across brand, product, growth and the systems behind the business.</p>
 </div>
 <aside class="hero-aside"><p>One brand. Six connected workstreams.</p><span class="hand">from idea to execution ↗</span></aside>
 </section>
 
 <section class="wrap section" id="approach">
-  <div class="section-head"><div><div class="eyebrow">The approach</div><h2>The Approach.</h2></div><p>A connected way of thinking, from finding the opportunity to making the business work.</p></div>
-  <div class="stages">
-    <article class="stage"><b>01 / DISCOVER</b><h3>Understand</h3><p>Market, customer and opportunity.</p></article>
-    <article class="stage"><b>02 / DEFINE</b><h3>Shape</h3><p>Positioning, proposition and priorities.</p></article>
-    <article class="stage"><b>03 / BUILD</b><h3>Make</h3><p>Brand, product and experience.</p></article>
-    <article class="stage"><b>04 / GROW</b><h3>Connect</h3><p>Content, search and commerce.</p></article>
-    <article class="stage"><b>05 / SCALE</b><h3>Enable</h3><p>Measurement and repeatable systems.</p></article>
+  <div class="section-head"><div><h2>The Approach</h2></div><p>From finding the opportunity to making the business work.</p></div>
+  <div class="approach-table">
+    <div class="approach-row"><span>01</span><strong>Discover</strong><p>Market, customer and opportunity</p><i>Find the signal</i></div>
+    <div class="approach-row"><span>02</span><strong>Define</strong><p>Positioning, proposition and priorities</p><i>Choose a direction</i></div>
+    <div class="approach-row"><span>03</span><strong>Build</strong><p>Brand, product and experience</p><i>Make it tangible</i></div>
+    <div class="approach-row"><span>04</span><strong>Grow</strong><p>Content, search and commerce</p><i>Earn attention</i></div>
+    <div class="approach-row"><span>05</span><strong>Scale</strong><p>Measurement and repeatable systems</p><i>Make it repeatable</i></div>
   </div>
 </section>
 <section class="wrap section" id="selected-work">
-  <div class="section-head"><div><div class="eyebrow">Selected work / Open the work</div><h2>Selected Work.</h2></div><p>Explore the actual artefacts, prototypes and decision tools behind the Nodd Men build.</p></div>
-  <div class="deliverables selected-grid">
-    <article class="deliverable"><div class="eyebrow">Brand strategy</div><h3>Brand Bible & identity system</h3><p>Selected original slides from the brand's strategic and visual foundation.</p><a class="action" href="portfolio/brand-bible/">Open Brand Bible ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Audience intelligence</div><h3>ICP & audience architecture</h3><p>Audience archetypes, opportunity ranking and entry-point logic.</p><a class="action" href="portfolio/icp/">Explore audience framework ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Interactive product experience</div><h3>AI Face Analysis & Style Drops</h3><p>A waitlist experience connecting face analysis with personalized style content.</p><a class="action amaranth" href="https://unseen-men.vercel.app/" target="_blank" rel="noopener">Open live experience ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Search intelligence</div><h3>Keyword Intelligence</h3><p>Search-demand research and topic exploration to inform SEO, AEO, GEO and content priorities.</p><a class="action" href="portfolio/dashboards/studio/?view=keyword">Open keyword dashboard ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Website & conversion</div><h3>Shopify website & PDP architecture</h3><p>Homepage modules, product-page structure, SKU copy maps and conversion content.</p><a class="action" href="portfolio/systems/shopify-copy/">Explore website & PDP work ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Creative production</div><h3>Launch narrative, scripts & shoots</h3><p>Campaign story, film structure, hooks, cut-downs and shoot planning.</p><a class="action" href="portfolio/systems/launch-creative/">Explore creative system ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Performance & reporting</div><h3>Marketing and e-commerce dashboards</h3><p>Connected reporting for acquisition, revenue, funnel health and store performance.</p><div class="actions"><a class="action" href="portfolio/dashboards/studio/?view=marketing">Marketing ↗</a><a class="action secondary" href="portfolio/dashboards/studio/?view=commerce">E-commerce ↗</a></div></article>
-    <article class="deliverable"><div class="eyebrow">Commercial intelligence</div><h3>D2C P&amp;L & unit economics</h3><p>Channel economics, contribution, SKU performance and profitability modelling.</p><a class="action" href="portfolio/dashboards/studio/?view=pnl">Explore financial model ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Lifecycle & launch</div><h3>Waitlist programme dashboard</h3><p>Signup funnel, acquisition mix, Founding Members and nurture performance.</p><a class="action" href="portfolio/dashboards/waitlist/">Open waitlist dashboard ↗</a></article>
-    <article class="deliverable"><div class="eyebrow">Operating systems</div><h3>Launch OS & business playbooks</h3><p>Launch task management, operating workflows, SOPs and fulfilment systems.</p><div class="actions"><a class="action" href="launch-tracker/">Launch OS ↗</a><a class="action secondary" href="portfolio/systems/">Systems library ↗</a></div></article>
+  <div class="section-head"><div><h2>Selected Work</h2></div><p>Selected artefacts, prototypes and decision tools from the Nodd Men build.</p></div>
+  <div class="work-table">
+    <article class="work-row"><div><span>01 / BRAND STRATEGY</span><h3>Brand Bible & identity system</h3><p>Strategic and visual foundations for the brand.</p></div><a href="portfolio/brand-bible/">Open the Brand Bible ↗</a></article>
+    <article class="work-row"><div><span>02 / AUDIENCE INTELLIGENCE</span><h3>ICP & audience architecture</h3><p>Audience archetypes, opportunity ranking and entry-point logic.</p></div><a href="portfolio/icp/">Explore the audience framework ↗</a></article>
+    <article class="work-row"><div><span>03 / PRODUCT EXPERIENCE</span><h3>AI Face Analysis & Style Drops</h3><p>A waitlist experience connecting face analysis with personalized style content.</p></div><a href="https://unseen-men.vercel.app/" target="_blank" rel="noopener">View live experience ↗</a></article>
+    <article class="work-row"><div><span>04 / SEARCH INTELLIGENCE</span><h3>Keyword Intelligence</h3><p>Search-demand research for SEO, AEO, GEO and content priorities.</p></div><a href="portfolio/dashboards/studio/?view=keyword">Explore keyword intelligence ↗</a></article>
+    <article class="work-row"><div><span>05 / WEBSITE & CONVERSION</span><h3>Shopify website & PDP architecture</h3><p>Homepage modules, product-page structure and conversion content.</p></div><a href="portfolio/systems/shopify-copy/">Explore website & PDP work ↗</a></article>
+    <article class="work-row"><div><span>06 / CREATIVE PRODUCTION</span><h3>Launch narrative, scripts & shoots</h3><p>Campaign story, film structure, hooks and shoot planning.</p></div><a href="portfolio/systems/launch-creative/">Explore creative system ↗</a></article>
+    <article class="work-row"><div><span>07 / PERFORMANCE</span><h3>Marketing & e-commerce dashboards</h3><p>Acquisition, revenue, funnel health and store performance.</p></div><a href="portfolio/dashboards/studio/?view=marketing">Explore performance dashboards ↗</a></article>
+    <article class="work-row"><div><span>08 / COMMERCIAL INTELLIGENCE</span><h3>D2C P&amp;L & unit economics</h3><p>Channel economics, contribution, SKU performance and profitability.</p></div><a href="portfolio/dashboards/studio/?view=pnl">Explore the financial model ↗</a></article>
+    <article class="work-row"><div><span>09 / LIFECYCLE & LAUNCH</span><h3>Waitlist programme dashboard</h3><p>Signup funnel, acquisition mix and nurture performance.</p></div><a href="portfolio/dashboards/waitlist/">Explore waitlist reporting ↗</a></article>
+    <article class="work-row"><div><span>10 / OPERATING SYSTEMS</span><h3>Launch OS & business playbooks</h3><p>Launch tracking, operating workflows, SOPs and fulfilment systems.</p></div><a href="launch-tracker/">Explore operating systems ↗</a></article>
   </div>
 </section>
 <section class="wrap section" id="inside-case-study">
-  <div class="section-head"><div><div class="eyebrow">Inside the case study</div><h2>Inside the Case Study.</h2></div><p>Six connected workstreams. Each one shows a different part of the business being brought to life.</p></div>
+  <div class="section-head"><div><h2>Inside the Case Study</h2></div><p>Six connected workstreams bringing different parts of the business to life.</p></div>
 </section>
 <section class="wrap section" id="workstreams">
 <div class="section-head"><div><div class="eyebrow">Inside the case study / Six workstreams</div><h2>Six disciplines.<br>One brand.</h2></div><p>The connected work behind the build.</p></div>
