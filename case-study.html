@@ -36,6 +36,19 @@
 .selected-grid .deliverable .action{margin-top:auto}
 .selected-grid .actions{margin-top:auto}
 @media(max-width:800px){.section-head{grid-template-columns:1fr!important;gap:12px!important}.section-head p{padding-top:0}.stages{grid-template-columns:repeat(2,1fr);gap:18px}.stage,.stage+.stage{padding:12px 8px 0 0;border-right:0;border-top:1px solid var(--line)}}
+
+/* Private, browser-local review annotations */
+.review-dock{position:fixed;z-index:9999;right:18px;bottom:18px;display:flex;gap:7px;align-items:center;padding:8px;background:#fffdf7;border:1px solid var(--line);box-shadow:0 8px 30px #17191620;border-radius:3px;font:11px var(--sans)}
+.review-dock button{border:1px solid var(--evergreen);background:var(--evergreen);color:var(--paper);padding:9px 12px;font:600 11px var(--sans);cursor:pointer}
+.review-dock button.secondary{background:transparent;color:var(--evergreen)}
+.review-dock button.active{background:var(--amaranth);border-color:var(--amaranth);color:white}
+.review-hint{position:fixed;z-index:9998;left:50%;bottom:20px;transform:translateX(-50%);background:var(--blue);color:white;padding:10px 15px;font:11px var(--sans);display:none;box-shadow:0 5px 18px #0002}
+body.review-picking,body.review-picking *{cursor:crosshair!important}
+.review-target{outline:2px dashed var(--amaranth)!important;outline-offset:4px}
+.review-note{position:relative;margin:14px 0;padding:12px 14px 12px 18px;max-width:520px;background:#fff0c9;border:1px solid #e8d69e;box-shadow:3px 4px 0 #05204a12;color:#342d20;font:13px/1.45 var(--sans);z-index:2}
+.review-note:before{content:"YOUR REVIEW NOTE";display:block;margin-bottom:5px;color:var(--amaranth);font:9px var(--mono);letter-spacing:.12em}
+.review-note button{float:right;border:0;background:transparent;color:var(--amaranth);cursor:pointer;font:12px var(--mono)}
+@media(max-width:560px){.review-dock{right:8px;bottom:8px;left:8px;justify-content:center}.review-hint{width:calc(100% - 24px);text-align:center;bottom:64px}}
 </style>
 </head>
 <body>
@@ -140,4 +153,46 @@
 <section class="wrap closing" id="contact"><div><div class="eyebrow">Continue the conversation</div><h2>Building the business behind the brand.</h2></div><div class="closing-actions"><a class="action" href="about.html">About Aayushi ↗</a><a class="action secondary" href="mailto:itsaayushitripathi@gmail.com">Get in touch ↗</a></div></section>
 </main>
 <footer class="wrap footer"><span>AT. / Aayushi Tripathi</span><span>Building D2C Skincare Brand at Nodd Men</span></footer>
-</body></html>
+
+<div class="review-dock" aria-label="Private review tools">
+  <button id="review-add" type="button">＋ Add note</button>
+  <button id="review-export" class="secondary" type="button">Export notes <span id="review-count">(0)</span></button>
+</div><div class="review-hint" id="review-hint">Click the exact section or element you want to comment on. Press Escape to cancel.</div>
+<script>
+(function(){
+  const KEY='at-portfolio-review-notes-v1';
+  const add=document.getElementById('review-add'),exportBtn=document.getElementById('review-export'),count=document.getElementById('review-count'),hint=document.getElementById('review-hint');
+  let picking=false,notes=[];
+  try{notes=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){notes=[]}
+  const save=()=>{localStorage.setItem(KEY,JSON.stringify(notes));count.textContent='('+notes.length+')'};
+  function targetFor(el){return el.closest('section,article,.annotation,.deliverable,.stream,.stage')||el}
+  function getId(el){if(!el.dataset.reviewId)el.dataset.reviewId='review-'+Math.random().toString(36).slice(2,10);return el.dataset.reviewId}
+  function render(){
+    document.querySelectorAll('.review-note').forEach(n=>n.remove());
+    notes.forEach((n,i)=>{
+      const target=document.querySelector('[data-review-id="'+n.target+'"]');if(!target)return;
+      const card=document.createElement('aside');card.className='review-note';card.dataset.noteIndex=i;
+      const remove=document.createElement('button');remove.type='button';remove.textContent='Remove';remove.addEventListener('click',()=>{notes.splice(i,1);save();render()});
+      card.appendChild(remove);card.appendChild(document.createTextNode(n.text));target.appendChild(card);
+    });
+    save();
+  }
+  function stop(){picking=false;document.body.classList.remove('review-picking');hint.style.display='none';add.classList.remove('active');document.querySelectorAll('.review-target').forEach(x=>x.classList.remove('review-target'))}
+  add.addEventListener('click',()=>{picking=!picking;if(picking){document.body.classList.add('review-picking');hint.style.display='block';add.classList.add('active')}else stop()});
+  document.addEventListener('click',e=>{
+    if(!picking)return;
+    if(e.target.closest('.review-dock,.review-note'))return;
+    const target=targetFor(e.target);if(target.closest('header,footer')){return}
+    e.preventDefault();e.stopPropagation();
+    const text=window.prompt('What needs changing here? Add a specific note:');if(text&&text.trim()){notes.push({target:getId(target),section:target.id||target.querySelector('h2,h3')?.textContent?.trim()||target.tagName.toLowerCase(),text:text.trim(),createdAt:new Date().toISOString()});save();render()}
+    stop();
+  },true);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&picking)stop()});
+  exportBtn.addEventListener('click',()=>{
+    const payload={page:location.href,exportedAt:new Date().toISOString(),notes};
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='aayushi-portfolio-review-notes.json';a.click();URL.revokeObjectURL(url);
+  });
+  render();
+})();
+</script></body></html>
